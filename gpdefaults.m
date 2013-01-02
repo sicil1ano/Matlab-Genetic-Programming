@@ -52,12 +52,21 @@ gp.treedef=orderfields(gp.treedef);
 gp.operators.about='Genetic operator configuration';
 %gp.operators.mutation.p_mutate=0.1;    
 %gp.operators.crossover.p_cross=0.85;
-load -mat mutate;
-load -mat cross;
-gp.operators.mutation.p_mutate=double(mutate);    
-gp.operators.crossover.p_cross=double(cross);
-delete mutate.mat;
-delete cross.mat;
+if exist('mutate.mat') > 0
+    load -mat mutate;
+    gp.operators.mutation.p_mutate=double(mutate);
+    delete mutate.mat;
+else
+    gp.operators.mutation.p_mutate=0.1;
+end
+
+if exist('cross.mat') > 0
+    load -mat cross;
+    gp.operators.crossover.p_cross=double(cross);
+    delete cross.mat;
+else
+    gp.operators.crossover.p_cross=0.85;
+end
 gp.operators.directrepro.p_direct=0.05; 
 gp.operators.mutation.mutate_par=[0.9 0.05 0.05 0 0 0];
 gp.operators.mutation.gaussian.std_dev=0.1;  % if mutate_type 3 (constant perturbation) is used this is the standard deviation of the Gaussian used.
