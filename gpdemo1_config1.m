@@ -121,21 +121,25 @@ if exist('activeTIMES.mat') == 0
 	activeTIMES = 0;
 else 
 	load activeTIMES;
+	delete activeTIMES.mat;
 end
 if exist('activeMINUS.mat') == 0 
 	activeMINUS = 0;
 else 
 	load activeMINUS;
+	delete activeMINUS.mat;
 end
 if exist('activePLUS.mat') == 0 
 	activePLUS = 0;
 else 
 	load activePLUS;
+	delete activePLUS.mat;
 end
 if exist('activeDIVIDE.mat') == 0 
 	activeDIVIDE = 0;
 else 
 	load activeDIVIDE;
+	delete activeDIVIDE.mat;
 end
 
 % default function sets

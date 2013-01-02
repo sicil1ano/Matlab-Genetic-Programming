@@ -80,32 +80,38 @@ if exist('pEstrInf.mat') == 0
 	pEstrInf = 0;
 else 
 	load pEstrInf;
+	delete pEstrInf.mat;
 end
 if exist('pEstrSup.mat') == 0 
 	pEstrSup = 300;
 else
 	load pEstrSup;
+	delete pEstrSup.mat;
 end
 %Inizializzo le variabili usate per definire i range di P nel termine (s^2+P1*s+P2)
 if exist('p1EstrInf.mat') == 0 
 	p1EstrInf = 0;
 else 
 	load p1EstrInf;
+	delete p1EstrInf.mat;
 end
 if exist('p1EstrSup.mat') == 0 
 	p1EstrSup = 300;
 else
 	load p1EstrSup;
+	delete p1EstrSup.mat;
 end
 if exist('p2EstrInf.mat') == 0 
 	p2EstrInf = 0;
 else 
 	load p2EstrInf;
+	delete p2EstrInf.mat;
 end
 if exist('p2EstrSup.mat') == 0 
 	p2EstrSup = 300;
 else
 	load p2EstrSup;
+	delete p2EstrSup.mat;
 end
 %recurse through branches
 while true

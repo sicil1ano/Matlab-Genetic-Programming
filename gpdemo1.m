@@ -96,36 +96,8 @@ if license('test','symbolic_toolbox')
     disp('generate the data.');
     disp('NOTE: In general, it is unusual for GP to evolve the exact form'); 
     disp('of the generative function.');
-    if exist('pEstrInf.mat') > 0 
-	    delete pEstrInf.mat;
-    end
-    if exist('pEstrSup.mat') > 0 
-	    delete pEstrSup.mat;
-    end
-    if exist('p1EstrInf.mat') > 0 
-	    delete p1EstrInf.mat;
-    end
-    if exist('p1EstrSup.mat') > 0 
-	    delete p1EstrSup.mat;
-    end
-    if exist('p2EstrInf.mat') > 0 
-	    delete p2EstrInf.mat;
-    end
-    if exist('p2EstrSup.mat') > 0 
-	    delete p2EstrSup.mat;
-    end
-    if exist('activeTIMES.mat') > 0 
-	    delete activeTIMES.mat;
-    end
-    if exist('activeMINUS.mat') > 0 
-	    delete activeMINUS.mat;
-    end
-    if exist('activePLUS.mat') > 0 
-	    delete activePLUS.mat;
-    end
-    if exist('activeDIVIDE.mat') > 0 
-	    delete activeDIVIDE.mat;
-    end
+    
+    
     
 end
 
